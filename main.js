@@ -4,10 +4,8 @@ const parola = prompt("inserisci")
 // let parolaRiunita = parolaReverse.join('');
 
 var parolaInversa = invertiParola(parola);
-var risultato = false;
 if(parola == parolaInversa){
     alert("è palindroma");
-    risultato = true;
 }
     else {
         alert("Non è palindroma");
@@ -21,13 +19,18 @@ function invertiParola(parola){
 
 /////////////pari dispari///////////
 
-pariODispari = prompt("scrivi qui pari o dispari");
+let pariODispari = prompt("scrivi qui pari o dispari");
 // controllo che siano inseriti o pari o dispari 
 if(pariODispari !== 'pari' | 'dispari' ){alert("inserisci o PARI o DISPARI");}
 
 let num1 = parseInt(Math.random()*5)+1;
 let inserisciNumero = parseInt(prompt("inserisci numero da 1 a 5"));
-let numSomm= num1 + inserisciNumero;
+let numSomm = funzione1(num1, inserisciNumero);
+
+function funzione1(){
+    return num1 + inserisciNumero;
+}
+
 
 if (inserisciNumero > 5 | inserisciNumero < 1)
     { 
@@ -35,7 +38,7 @@ if (inserisciNumero > 5 | inserisciNumero < 1)
     }
 
     else{
-    let ispariOrNot = ""
+    ispariOrNot = ""
     if (numSomm % 2 == 0){
         var ispari = "pari"
         if(pariODispari == ispari){
